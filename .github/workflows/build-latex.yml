@@ -21,8 +21,7 @@ jobs:
             texlive-fonts-recommended \
             texlive-latex-extra \
             texlive-lang-cjk \
-            fonts-noto-cjk \
-            fonts-malgun-gothic
+            fonts-noto-cjk
 
       - name: Build PDF with XeLaTeX
         run: |

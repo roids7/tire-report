@@ -1,15 +1,15 @@
 % report.tex - 간단한 한글 LaTeX 보고서 템플릿 (XeLaTeX 사용 권장)
 \documentclass[10pt,a4paper]{article}
 
-% 한글 설정: fontspec + 윈도우 기본 폰트 (Malgun Gothic)
+% 한글 설정: fontspec + Noto CJK (xeCJK 의존성 제거)
 \usepackage{fontspec}
 \usepackage{xeCJK}
 \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
-% Windows 기본 한글 폰트 사용
+% Ubuntu에서 설치 가능한 Noto CJK 폰트 사용
 \setmainfont{Times New Roman}
 \setsansfont{Arial}
-\setCJKmainfont{Malgun Gothic}
-\setCJKsansfont{Malgun Gothic}
+\setCJKmainfont{Noto Sans CJK KR}
+\setCJKsansfont{Noto Sans CJK KR}
 
 \usepackage{amsmath,amssymb}
 \usepackage{graphicx}
