@@ -266,6 +266,26 @@ PTT 구성식 (\ref{eq:ptt})의 좌변:
 
 물리적 의미: 응력의 시간 진화는 현재의 변형률(우변)에 의해 구동되지만, 과거에 축적된 응력(좌변의 지수함수)과 응력의 이완(좌변의 컨벡티드 미분)에 의해 조절된다.
 
+\subsection{핵심 방정식 요약}
+
+PTT 점탄성 구성식:
+\begin{equation}
+\exp\Big[\frac{\varepsilon \lambda}{\eta_1}\,\mathrm{tr}(\boldsymbol{\tau}_1)\Big]\,\boldsymbol{\tau}_1 + \lambda \Big[(1-\tfrac{\xi}{2})\overset{\nabla}{\boldsymbol{\tau}_1} + \tfrac{\xi}{2}\overset{\triangle}{\boldsymbol{\tau}_1}\Big] = 2\eta_1 \mathbf{D}
+\label{eq:ptt}
+\end{equation}
+
+지수항만 분리하면:
+\begin{equation}
+\mathcal{E}(\boldsymbol{\tau}_1) = \exp\Big[\frac{\varepsilon \lambda}{\eta_1}\,\mathrm{tr}(\boldsymbol{\tau}_1)\Big]
+\label{eq:exp_term}
+\end{equation}
+
+정상응력 차이 정의:
+\begin{equation}
+N_1 = \tau_{11}-\tau_{22}, \qquad N_2 = \tau_{22}-\tau_{33}
+\label{eq:normal_stress}
+\end{equation}
+
 \section{다이 팽윤과 유동 특성 분석}
 
 \subsection{다이 팽윤의 물리적 메커니즘}
@@ -544,11 +564,11 @@ S_{ij} = \frac{\partial f_i}{\partial x_j} \bigg|_{\mathbf{x}_0}
 
 각 층의 PTT 파라미터가 다르면, 유동 특성에 큰 차이가 난다:
 
-\begin{equation}
-\text{크라운(Crown)}: & \lambda_C, \varepsilon_C \quad \Rightarrow B_C = f(\lambda_C, \varepsilon_C, \dot\gamma_C) \\
-\text{베이스(Base)}: & \lambda_B, \varepsilon_B \quad \Rightarrow B_B = f(\lambda_B, \varepsilon_B, \dot\gamma_B) \\
-\text{윙(Wing)}: & \lambda_W, \varepsilon_W \quad \Rightarrow B_W = f(\lambda_W, \varepsilon_W, \dot\gamma_W)
-\end{equation}
+\begin{aligned}
+	ext{크라운(Crown)}: &\quad \lambda_C, \varepsilon_C \; \Rightarrow\; B_C = f(\lambda_C, \varepsilon_C, \dot\gamma_C) \\
+	ext{베이스(Base)}: &\quad \lambda_B, \varepsilon_B \; \Rightarrow\; B_B = f(\lambda_B, \varepsilon_B, \dot\gamma_B) \\
+	ext{윙(Wing)}: &\quad \lambda_W, \varepsilon_W \; \Rightarrow\; B_W = f(\lambda_W, \varepsilon_W, \dot\gamma_W)
+\end{aligned}
 
 일반적으로 $B_C > B_B > B_W$이므로, 계면이 곡선 형태로 왜곡된다:
 
@@ -647,7 +667,7 @@ W^* = \arg\min_W \left(\delta(W) + \lambda_{\text{cost}} C(W)\right)
 \begin{itemize}
   \item 형상 정밀도 우선: $W$를 크게 설정 (≥100 mm)
   \item 표면 품질 중시: $W$를 중간 범위 유지 (50-80 mm)
-  \item 비용 우선: $W$를 작게 설정 (≤50 mm) - 대신 다이 내부 피드 블록 설계 최적화
+  \item 비용 우선: $W$를 작게 설정 (\leq 50 \text{ mm}) - 대신 다이 내부 피드 블록 설계 최적화
 \end{itemize}
 
 \subsubsection{수렴각 선택}
@@ -713,8 +733,8 @@ v_d = \frac{Q}{S_0} \cdot \kappa, \quad \kappa = 1 + \frac{B_{\text{target}} - B
 
 권장사항:
 \begin{itemize}
-  \item 다이 팽윤 과다 ($B > 15\%$): $v_d$ 증가 (인발 속도 2-3% 상향)
-  \item 다이 팽윤 부족 ($B < 5\%$): $v_d$ 감소 (인발 속도 2-3% 하향)
+  \item 다이 팽윤 과다 ($B > 15\%$): $v_d$ 증가 (인발 속도 2-3\% 상향)
+  \item 다이 팽윤 부족 ($B < 5\%$): $v_d$ 감소 (인발 속도 2-3\% 하향)
   \item 적정 범위 ($5\% < B < 15\%$): $v_d$ 유지
 \end{itemize}
 
