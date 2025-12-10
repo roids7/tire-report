@@ -1,13 +1,13 @@
 % report.tex - 간단한 한글 LaTeX 보고서 템플릿 (XeLaTeX 사용 권장)
 \documentclass[10pt,a4paper]{article}
 
-% 한글 설정: fontspec + xeCJK, Ubuntu에서 기본 제공/설치 가능한 Noto 계열 사용
+% 한글 설정: fontspec + xeCJK
+% 라틴 폰트는 TeX Live 기본 제공 TeX Gyre 계열, 한글은 Noto Sans CJK KR (fonts-noto-cjk)
 \usepackage{fontspec}
 \usepackage{xeCJK}
 \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
-% 라틴: Noto Serif / Sans, 한글: Noto Sans CJK KR (fonts-noto-cjk 패키지)
-\setmainfont{Noto Serif}
-\setsansfont{Noto Sans}
+\setmainfont{TeX Gyre Pagella}
+\setsansfont{TeX Gyre Heros}
 \setCJKmainfont{Noto Sans CJK KR}
 \setCJKsansfont{Noto Sans CJK KR}
 
