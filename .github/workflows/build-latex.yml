@@ -25,11 +25,24 @@ jobs:
 
       - name: Build PDF with XeLaTeX
         run: |
-          latexmk -pdf -xelatex -interaction=nonstopmode -halt-on-error report.tex || true
+          latexmk -pdf -xelatex -interaction=nonstopmode report.tex 2>&1 | tee build.log
+          echo "Build completed, checking for PDF..."
+          ls -lh report.pdf || echo "PDF not found"
+          
+      - name: Upload build log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-log
+          path: |
+            build.log
+            report.log
+          if-no-files-found: warn
 
       - name: Upload PDF artifact
+        if: success()
         uses: actions/upload-artifact@v4
         with:
           name: report-pdf
           path: report.pdf
-          if-no-files-found: warn
+          if-no-files-found: error
