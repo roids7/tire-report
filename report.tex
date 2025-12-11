@@ -403,9 +403,9 @@ PSR이 실리카 충전계에 도입되면, PSR의 양전하를 띤 phosphonium 
   \item 공정 효율성 극대화
 \end{itemize}
 
-\subsection{기본 지배방정식}
+\subsection{기본 지배방정식 및 구성식}
 
-\subsubsection{연속 방정식 (Continuity Equation)}
+\subsubsection{연속 방정식과 운동량 방정식}
 
 질량 보존 원리에 따른 연속 방정식은:
 \begin{equation}
@@ -421,9 +421,7 @@ PSR이 실리카 충전계에 도입되면, PSR의 양전하를 띤 phosphonium 
 
 각 층($k = I, II, III$는 크라운, 베이스, 윙)에 대해 독립적으로 질량이 보존되어야 하며, 계면에서도 속도의 법선 성분이 연속이어야 한다.
 
-\subsection{운동량 방정식 (Momentum Equation)}
-
-뉴턴의 제2법칙(관성력 = 작용력)에 따른 운동량 방정식:
+정상 유동에서의 운동량 방정식:
 \begin{equation}
 \rho\frac{D\mathbf{v}}{Dt} = \rho\mathbf{g} + \nabla \cdot \boldsymbol{\sigma}
 \label{eq:momentum_general}
@@ -456,16 +454,7 @@ PSR이 실리카 충전계에 도입되면, PSR의 양전하를 띤 phosphonium 
 \label{eq:stress_decomposition}
 \end{equation}
 
-\subsubsection{편차응력의 물리적 의미}
-
-정수압 $p_k$는 방향성이 없는 등방 압축을 나타내고, 편차응력 $\boldsymbol{\tau}_k$는 방향성 있는 전단 응력과 비등방 응력을 나타낸다. 뉴턴 유체에서는:
-\begin{equation}
-\boldsymbol{\tau} = 2\eta \mathbf{D}
-\end{equation}
-
-하지만 점탄성 유체에서는 과거 이력, 현재 변형률, 회전 효과를 모두 반영해야 하므로 훨씬 복잡한 구성식이 필요하다.
-
-\subsection{변형률 텐서와 회전 텐서}
+\subsubsection{속도 구배의 분해: 변형률과 회전}
 
 속도 구배 텐서 $\nabla\mathbf{v}$는 항상 대칭 성분과 반대칭 성분으로 분해된다:
 \begin{equation}
@@ -503,9 +492,9 @@ PSR이 실리카 충전계에 도입되면, PSR의 양전하를 띤 phosphonium 
 
 따라서 물리적으로 타당한 구성식은 $\mathbf{D}$와 객관적 시간 미분(objective time derivative)에만 의존해야 한다. 회전 텐서 $\mathbf{W}$는 응력의 직접적인 원인이 될 수 없고, 오직 컨벡티드 미분을 통해 간접적으로만 나타난다.
 
-\subsection{PTT 점탄성 구성식과 다이 팽윤}
+\subsection{PTT 점탄성 모델과 다이 팽윤}
 
-\subsubsection{편차응력의 분류}
+\subsubsection{편차응력의 분해 및 구성식}
 
 점탄성 유체에서 전체 편차응력 $\boldsymbol{\tau}$는 탄성 성분 $\boldsymbol{\tau}_1$과 점성 성분 $\boldsymbol{\tau}_2$로 분해된다:
 \begin{equation}
@@ -518,17 +507,13 @@ PSR이 실리카 충전계에 도입되면, PSR의 양전하를 띤 phosphonium 
   \item $\boldsymbol{\tau}_2$: \textbf{점성 성분(Viscous Component)} - 뉴턴 유체처럼 현재 변형률에만 의존
 \end{itemize}
 
-\subsection{점성 편차응력}
-
-점성 성분은 뉴턴 유체의 구성식을 따른다:
+점성 성분:
 \begin{equation}
 \boldsymbol{\tau}_2 = 2\eta_2 \mathbf{D}
 \label{eq:tau_2}
 \end{equation}
 
-여기서 $\eta_2$는 점성 점도(viscous viscosity)이고, 이는 현재의 변형률률 $\mathbf{D}$에만 비례한다.
-
-\subsubsection{탄성 편차응력과 PTT 모델}
+\subsubsection{탄성 성분과 PTT 모델}
 
 파라미터 $\eta_1, \lambda, \varepsilon, \xi$를 가진 PTT(Phan-Thien-Tanner) 구성식:
 \begin{equation}
@@ -547,7 +532,7 @@ PSR이 실리카 충전계에 도입되면, PSR의 양전하를 띤 phosphonium 
 
 \subsubsection{비선형 응력 구성식의 의미}
 
-\subsubsection{지수함수 항의 역할}
+\paragraph{지수함수 항의 역할}
 
 \begin{equation}
 \exp\left[\frac{\varepsilon\lambda}{\eta_1}\mathrm{tr}(\boldsymbol{\tau}_1)\right]
@@ -561,7 +546,7 @@ PSR이 실리카 충전계에 도입되면, PSR의 양전하를 띤 phosphonium 
   \item \textbf{응력 포화}: 과도한 신장에서 응력 증가가 제한됨 (고분자 사슬의 한계)
 \end{enumerate}
 
-\subsubsection{컨벡티드 미분과 회전 효과}
+\paragraph{컨벡티드 미분과 회전 효과}
 
 상-컨벡티드 미분(Upper-Convected Derivative):
 \begin{equation}
@@ -582,7 +567,7 @@ PSR이 실리카 충전계에 도입되면, PSR의 양전하를 띤 phosphonium 
 
 은 응력의 좌표계 회전에 대한 객관성(objectivity)을 보장하면서도, 매개변수 $\xi$를 통해 특정 고무의 거동에 맞도록 조절한다.
 
-\subsection{PTT 모델의 물리적 해석}
+\subsubsection{다이 팽윤의 물리적 메커니즘}
 
 PTT 구성식 (\ref{eq:ptt})의 좌변:
 \begin{equation}
@@ -596,59 +581,21 @@ PTT 구성식 (\ref{eq:ptt})의 좌변:
 
 물리적 의미: 응력의 시간 진화는 현재의 변형률(우변)에 의해 구동되지만, 과거에 축적된 응력(좌변의 지수함수)과 응력의 이완(좌변의 컨벡티드 미분)에 의해 조절된다.
 
-\subsection{핵심 방정식 요약}
-
-PTT 점탄성 구성식:
-\begin{equation}
-\exp\Big[\frac{\varepsilon \lambda}{\eta_1}\,\mathrm{tr}(\boldsymbol{\tau}_1)\Big]\,\boldsymbol{\tau}_1 + \lambda \Big[(1-\tfrac{\xi}{2})\overset{\nabla}{\boldsymbol{\tau}_1} + \tfrac{\xi}{2}\overset{\triangle}{\boldsymbol{\tau}_1}\Big] = 2\eta_1 \mathbf{D}
-\label{eq:ptt}
-\end{equation}
-
-지수항만 분리하면:
-\begin{equation}
-\mathcal{E}(\boldsymbol{\tau}_1) = \exp\Big[\frac{\varepsilon \lambda}{\eta_1}\,\mathrm{tr}(\boldsymbol{\tau}_1)\Big]
-\label{eq:exp_term}
-\end{equation}
-
-정상응력 차이 정의:
-\begin{equation}
-N_1 = \tau_{11}-\tau_{22}, \qquad N_2 = \tau_{22}-\tau_{33}
-\label{eq:normal_stress}
-\end{equation}
-
-\subsection{유동 특성과 다이 팽윤}
-
-\subsubsection{다이 팽윤의 물리적 메커니즘}
+\subsubsection{다이 팽윤율과 정상응력}
 
 \subsubsection{다이 팽윤의 물리적 메커니즘}
 
 다이 팽윤(die swell)은 압출 출구에서 고분자 사슬의 탄성 회복과 속도 재분배에 의해 발생하는 현상이다. 발생 과정:
 
 \begin{enumerate}
-  \item \textbf{다이 내부 (Pre-exit region)}
-  \begin{itemize}
-    \item 압축된 유로 내에서 고분자 사슬이 신장됨
-    \item 신장응력 축적: 식 (\ref{eq:normal_stress})의 $N_1, N_2$ 증가
-    \item 응력 텐서의 자취 $\mathrm{tr}(\boldsymbol{\tau}_1)$이 증가하여 지수함수 항이 강화 (식 \ref{eq:exp_term})
-  \end{itemize}
-  
-  \item \textbf{출구 직후 (Post-exit region)}
-  \begin{itemize}
-    \item 구속이 갑자기 풀림 → 속도 구배 급변
-    \item 축 방향 정상응력 $\tau_{11}$이 급격히 감소
-    \item 누적된 탄성 에너지가 방출되면서 횡 방향으로 팽창
-  \end{itemize}
-  
-  \item \textbf{원인이 되는 정상응력 차이}
-  \begin{equation}
-  N_1 = \tau_{11} - \tau_{22} > 0 \quad \text{(일반적으로 양수)}
-  \label{eq:normal_stress_11_22}
-  \end{equation}
-  
-  출구에서 축 방향 제약이 풀리면 축 방향 응력은 빠르게 감소하지만, 횡 방향 응력은 느리게 감소하므로 순 장력이 팽창을 유도한다.
+  \item \textbf{다이 내부}: 신장응력 축적, 지수함수 항 강화
+  \item \textbf{출구 직후}: 구속 해제, 탄성 에너지 방출, 횡 방향 팽창
+  \item \textbf{원인}: 정상응력 차이 $N_1 = \tau_{11} - \tau_{22} > 0$
 \end{enumerate}
 
-\subsubsection{다이 팽윤율의 정의}
+\paragraph{다이 팽윤율}
+
+\subsubsection{다이 팽윤의 물리적 메커니즘}
 
 다이 팽윤율(die swell ratio, swelling index):
 \begin{equation}
@@ -688,9 +635,9 @@ B_{\text{Crown}} \neq B_{\text{Base}} \neq B_{\text{Wing}}
 
 이러한 팽윤 차이로 인해 계면 형상이 왜곡되고, 최종 제품의 치수 편차와 형상 불일치가 발생한다.
 
-\subsection{유동 특성과 다이 설계}
+\subsection{유동 균일성과 설계 파라미터 효과}
 
-\subsubsection{유동 균일성 지수}
+\subsubsection{유동 균일성 지수와 벽면 전단률}
 
 3중 공압출에서 세 층의 계면 형상은 각 층의 유동 특성에 따라 결정된다. 유동 불균일성(flow non-uniformity):
 \begin{equation}
@@ -706,7 +653,7 @@ $\delta$가 작을수록:
   \item 표면 품질 향상
 \end{itemize}
 
-\subsection{벽면 전단률}
+\paragraph{벽면 전단률}
 
 다이 내부 벽면에서의 전단률:
 \begin{equation}
@@ -724,9 +671,9 @@ $\delta$가 작을수록:
 
 따라서 공정 설계에서는 $\dot\gamma_w$를 허용 범위 이하로 제어해야 한다.
 
-\subsection{다이 구조 설계 및 최적화}
+\subsection{설계 파라미터와 공정 최적화}
 
-\subsubsection{다이 구조 파라미터}
+\subsubsection{다이 너비와 수렴각
 
 \paragraph{다이 너비 (Die Width)}
 
@@ -746,9 +693,7 @@ $\delta$가 작을수록:
 
 수렴각 증가 → 벽면 전단률 급증 → 표면 품질 저하. 동시에 압출 방향에 따라 유동 분배가 급격하게 변하는 고전단 영역이 입구에서 출구로 이동하면서 형상 편차도 증가한다.
 
-\subsubsection{공정 파라미터}
-
-\subsubsection{유입 유량 (Inlet Flow Rate)}
+\subsubsection{유량과 인발 속도}
 
 유입 유량 $Q$와 관련된 특성 전단률 $\dot\gamma_c = Q/A$ (여기서 $A$는 다이 단면적)라 하면:
 
@@ -764,7 +709,7 @@ $\delta$가 작을수록:
   \item 유동 균일성 저하
 \end{itemize}
 
-\subsubsection{인발 속도 (Drawing Speed)}
+\paragraph{인발 속도}
 
 인발 속도를 $v_d$라 할 때, 다이 입구와 출구 사이의 응력 평형 관계:
 \begin{equation}
@@ -773,7 +718,7 @@ $\delta$가 작을수록:
 
 즉, 인발 속도 증가 → 다이 팽윤 감소. 이는 출구 이후의 응력 완화 시간이 단축되기 때문이다.
 
-\subsubsection{재료 특성과 전단 효과}
+\subsubsection{계면 전단과 윙팁 영역}
 
 세 개 층의 PTT 파라미터가 상이할 때, 경계층 근처에서 강한 전단이 집중된다:
 \begin{equation}
@@ -787,9 +732,9 @@ $\delta$가 작을수록:
 
 이로 인해 윙팁 영역에 표면 결함(흐름 불안정성, 표면 주름 등)이 선택적으로 발생한다.
 
-\subsection{다이 설계 최적화 및 계면 동역학}
+\subsection{다중 목적 최적화와 계면 동역학}
 
-\subsubsection{다중 목적 함수 최적화}
+\subsubsection{다중 목적 최적화와 파레토 해}
 
 공압출 공정의 설계는 상충(conflict)하는 여러 목표를 동시에 만족해야 한다:
 
@@ -820,7 +765,7 @@ v_d \leq v_{\text{max}} & \text{(냉각 능력 고려)}
 \label{eq:constraints}
 \end{equation}
 
-\subsection{파라미터 감도 분석}
+\paragraph{파라미터 감도 분석}
 
 각 설계 변수가 성능 메트릭에 미치는 영향을 정량화하기 위해 감도 분석(sensitivity analysis)을 수행한다:
 
@@ -848,7 +793,7 @@ S_{ij} = \frac{\partial f_i}{\partial x_j} \bigg|_{\mathbf{x}_0}
   \end{equation}
 \end{itemize}
 
-\subsection{파레토 최적해(Pareto Optimal Solution)}
+\paragraph{파레토 최적해와 실무 적용}
 
 다중 목적 최적화에서는 여러 파레토 최적해가 존재한다. 이는 한 목표를 개선하려면 다른 목표를 악화시켜야 하는 상황을 의미한다:
 
@@ -857,9 +802,7 @@ S_{ij} = \frac{\partial f_i}{\partial x_j} \bigg|_{\mathbf{x}_0}
 \label{eq:pareto_optimality}
 \end{equation}
 
-여기서 $\mathcal{F}$는 가능(feasible) 영역이다.
-
-실제 공정 선택은 가중 스칼라화(weighted scalarization)를 통해 단일 목적함수로 변환한다:
+여기서 $\mathcal{F}$는 가능(feasible) 영역이다. 실제 공정 선택은 가중 스칼라화(weighted scalarization)를 통해 단일 목적함수로 변환한다:
 
 \begin{equation}
 \min \sum_{i=1}^3 w_i f_i(\mathbf{x}), \quad \sum w_i = 1, \, w_i \geq 0
@@ -935,7 +878,7 @@ S_{ij} = \frac{\partial f_i}{\partial x_j} \bigg|_{\mathbf{x}_0}
   \label{eq:governing_full}
   \end{equation}
 
-\subsubsection{최적화 문제의 실제 적용}
+\paragraph{최적화 문제의 실제 적용}
 
 다이 너비, 수렴각, 유량, 인발 속도를 설계 변수로 하는 다중 목적 최적화:
 
@@ -950,34 +893,13 @@ S_{ij} = \frac{\partial f_i}{\partial x_j} \bigg|_{\mathbf{x}_0}
 \label{eq:optimization_practical}
 \end{equation}
 
-\subsubsection{설계 가중치의 설정}
+설계 가중치는 공정의 우선순위에 따라 다음과 같이 설정한다. 형상 정밀도 우선($w_1 = 0.3$), 표면 품질 우선($w_2 = 0.4$), 계면 형상 제어($w_3 = 0.2$), 경제성($w_4 = 0.1$).
 
-\begin{itemize}
-  \item $w_1 = 0.3$: 형상 편차 (정밀도 우선)
-  \item $w_2 = 0.4$: 벽면 전단률 (표면 품질 우선)
-  \item $w_3 = 0.2$: 층간 팽윤 차이 (계면 형상 제어)
-  \item $w_4 = 0.1$: 생산 비용 (경제성)
-\end{itemize}
+\subsection{공정 설계 지침 및 최종 결론}
 
-\subsection{결론 및 설계 지침}
+\paragraph{주요 연구 성과}
 
-\subsubsection{주요 결과}
-
-타이어 트레드 3중 공압출 공정에 대한 본 연구의 주요 성과:
-
-\begin{enumerate}
-  \item \textbf{기하학적 정식화}: 식 (\ref{eq:governing_full})의 PTT 점탄성 모델을 통해 타이어 트레드 3중 공압출 유동을 정확히 모사할 수 있음을 보였다.
-  
-  \item \textbf{다이 팽윤 메커니즘}: 식 (\ref{eq:swell})과 (\ref{eq:ptt})의 관계로부터, 다이 팽윤이 응력 텐서의 자취 $\mathrm{tr}(\boldsymbol{\tau}_1)$과 정상응력 $N_1$에 의존함을 명시적으로 도출했다.
-  
-  \item \textbf{계면 왜곡 원인}: 식 (\ref{eq:interface_curvature})를 통해 층별 팽윤 차이 $|B_i - B_j|$가 계면 형상 왜곡의 직접적 원인임을 보였다.
-  
-  \item \textbf{다이 구조 영향}: 식 (\ref{eq:die_width_effects})와 (\ref{eq:convergence_angle_effects})로부터, 다이 너비와 수렴각이 유동 균일성과 벽면 전단률에 미치는 정량적 영향을 정식화했다.
-  
-  \item \textbf{공정 최적화 전략}: 다중 목적 최적화 제약 조건 하에서 파레토 최적해를 도출하는 방법론을 제시했다.
-\end{enumerate}
-
-\subsection{공정 설계 지침}
+타이어 트레드 3중 공압출 공정에 대한 본 연구는 다음과 같은 성과를 도출하였다. 첫째, PTT 점탄성 모델을 통해 타이어 트레드 3중 공압출 유동을 정확히 모사할 수 있음을 보였다. 둘째, 다이 팽윤이 응력 텐서와 정상응력에 의존함을 명시적으로 도출했다. 셋째, 층별 팽윤 차이가 계면 형상 왜곡의 직접적 원인임을 보였다. 넷째, 다이 너비와 수렴각이 유동 균일성과 벽면 전단률에 미치는 정량적 영향을 정식화했다. 다섯째, 다중 목적 최적화 제약 조건 하에서 파레토 최적해를 도출하는 방법론을 제시했다.
 
 \subsubsection{다이 너비 선택}
 
@@ -1068,41 +990,25 @@ v_d = \frac{Q}{S_0} \cdot \kappa, \quad \kappa = 1 + \frac{B_{\text{target}} - B
   \item 적정 범위 ($5\% < B < 15\%$): $v_d$ 유지
 \end{itemize}
 
-\subsubsection{고급 제어 전략}
+\paragraph{고급 제어 전략 및 실시간 모니터링}
 
-각 층의 유량을 독립적으로 제어하기 위해 피드 블록 설계:
+각 층의 유량을 독립적으로 제어하기 위해 피드 블록 설계를 다음과 같이 한다:
 
 \begin{equation}
 h_k^{\text{feed}} = \frac{Q_k \cdot L}{v_{\text{nominal}} \cdot W}
 \label{eq:feed_block_height}
 \end{equation}
 
-여기서 $k = \text{Crown}, \text{Base}, \text{Wing}$이다.
+여기서 $k = \text{Crown}, \text{Base}, \text{Wing}$이다. 실시간 모니터링을 위해 다이 입구·출구의 압력 센서, 다이 내부의 온도 센서, 압출 출구의 카메라, 제품 인발력 센서를 설치하여 흐름 저항, 점도 변화, 형상 편차, 응력 상태를 추정한다. 피드백 제어는 다음 식으로 표현된다:
 
-\subsubsection{실시간 모니터링}
-
-\begin{itemize}
-  \item \textbf{압력 센서}: 다이 입구, 출구 → 흐름 저항 및 팽윤 추정
-  \item \textbf{온도 센서}: 다이 내부 → 점도 변화 감지
-  \item \textbf{카메라}: 압출 출구 → 형상 편차 실시간 모니터링
-  \item \textbf{인발 힘 센서}: 제품 인발력 → 응력 상태 추정
-\end{itemize}
-
-피드백 제어:
 \begin{equation}
 \Delta Q = K_P (B_{\text{target}} - B_{\text{actual}}) + K_I \int (B_{\text{target}} - B_{\text{actual}}) \, dt
 \label{eq:feedback_control}
 \end{equation}
 
-\subsection{향후 연구 과제}
+\paragraph{향후 연구 과제}
 
-\begin{enumerate}
-  \item \textbf{3D 수치해석}: 현재는 2D 또는 축대칭 해석이 주류 → 완전 3D 다이 형상에서의 이방성 효과 고려
-  \item \textbf{열 이송}: 점도의 온도 의존성, 전단 가열, 냉각 효과 포함
-  \item \textbf{비뉴턴 성질}: PTT 모델을 넘어 더 고급 모델(multi-mode 모델, 비선형 비탄성) 적용
-  \item \textbf{표면 불안정성}: 전단 화이트닝(shear whitening), 표면 결함의 근본 원인 규명
-  \item \textbf{실험 검증}: 수치해석 결과와 실제 압출 실험의 체계적 비교
-\end{enumerate}
+향후 연구 과제로는 다음을 제시한다. 현재 2D 또는 축대칭 해석이 주류이므로, 완전 3D 다이 형상에서의 이방성 효과를 고려한 수치해석이 필요하다. 또한 점도의 온도 의존성, 전단 가열, 냉각 효과를 포함한 열 이송 해석을 추가해야 한다. PTT 모델을 넘어 multi-mode 점탄성 모델이나 비선형 비탄성 모델을 적용하여 더 높은 정확도를 추구해야 한다. 전단 화이트닝(shear whitening) 현상과 표면 결함의 근본 원인을 규명하기 위한 표면 불안정성 분석도 필요하며, 수치해석 결과와 실제 압출 실험의 체계적 비교를 통해 모델을 검증해야 한다.
 
 
 
