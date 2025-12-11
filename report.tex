@@ -564,11 +564,13 @@ S_{ij} = \frac{\partial f_i}{\partial x_j} \bigg|_{\mathbf{x}_0}
 
 각 층의 PTT 파라미터가 다르면, 유동 특성에 큰 차이가 난다:
 
+\begin{equation*}
 \begin{aligned}
-	ext{크라운(Crown)}: &\quad \lambda_C, \varepsilon_C \; \Rightarrow\; B_C = f(\lambda_C, \varepsilon_C, \dot\gamma_C) \\
-	ext{베이스(Base)}: &\quad \lambda_B, \varepsilon_B \; \Rightarrow\; B_B = f(\lambda_B, \varepsilon_B, \dot\gamma_B) \\
-	ext{윙(Wing)}: &\quad \lambda_W, \varepsilon_W \; \Rightarrow\; B_W = f(\lambda_W, \varepsilon_W, \dot\gamma_W)
+\text{Crown}: &\quad \lambda_C, \varepsilon_C \; \Rightarrow\; B_C = f(\lambda_C, \varepsilon_C, \dot\gamma_C) \\
+\text{Base}: &\quad \lambda_B, \varepsilon_B \; \Rightarrow\; B_B = f(\lambda_B, \varepsilon_B, \dot\gamma_B) \\
+\text{Wing}: &\quad \lambda_W, \varepsilon_W \; \Rightarrow\; B_W = f(\lambda_W, \varepsilon_W, \dot\gamma_W)
 \end{aligned}
+\end{equation*}
 
 일반적으로 $B_C > B_B > B_W$이므로, 계면이 곡선 형태로 왜곡된다:
 
@@ -665,9 +667,9 @@ W^* = \arg\min_W \left(\delta(W) + \lambda_{\text{cost}} C(W)\right)
 
 권장사항:
 \begin{itemize}
-  \item 형상 정밀도 우선: $W$를 크게 설정 (≥100 mm)
+  \item 형상 정밀도 우선: $W$를 크게 설정 ($\geq 100$ mm)
   \item 표면 품질 중시: $W$를 중간 범위 유지 (50-80 mm)
-  \item 비용 우선: $W$를 작게 설정 (\leq 50 \text{ mm}) - 대신 다이 내부 피드 블록 설계 최적화
+  \item 비용 우선: $W$를 작게 설정 ($\leq 50$ mm) - 대신 다이 내부 피드 블록 설계 최적화
 \end{itemize}
 
 \subsubsection{수렴각 선택}
