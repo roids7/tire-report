@@ -45,6 +45,32 @@
 
 타이어를 다층 복합재로 보고, 정련·압출·압연·반제품·성형·가류·검사에 이르는 전체 공정을 계통적으로 정리할 수 있다. 본 보고서에서는 이러한 공정 체인 중에서 공정 능력 관점에서 트레드 공압출과 가류 공정을 중점적으로 분석하였다.
 
+\subsection{타이어의 기능과 성과지표}
+
+\subsubsection{타이어의 핵심 기능}
+
+타이어는 차량과 노면 사이의 유일한 접점으로서 다음의 기능을 수행한다:
+
+\begin{itemize}
+  \item \textbf{차량 하중 지지}: 차량과 승객, 화물의 전체 중량을 안전하게 지탱
+  \item \textbf{가속력과 제동력 전달}: 엔진의 구동력과 브레이크의 제동력을 지면에 효율적으로 전달
+  \item \textbf{조향}: 운전자의 조향 입력을 노면에 전달하여 차량 방향 제어
+  \item \textbf{지면 충격 흡수}: 노면의 요철과 충격을 흡수하여 승차감 향상
+\end{itemize}
+
+\subsubsection{타이어 성과지표(KPI)}
+
+타이어 시장에서 중요시하는 핵심 성과지표는 다음과 같다:
+
+\begin{enumerate}
+  \item \textbf{연비(Fuel Efficiency)}: 구름 저항 최소화를 통한 연료 소비 절감
+  \item \textbf{수명(Durability)}: 타이어의 내마모성과 전체 주행 가능 거리
+  \item \textbf{젖은 노면 접지력(Wet Grip)}: 비오는 도로에서의 제동 성능과 안전성
+  \item \textbf{마른 노면 접지력(Dry Grip)}: 일반 도로에서의 가속·제동·코너링 성능
+  \item \textbf{조향 안정성(Handling)}: 코너링 반응성과 주행 안정성
+  \item \textbf{승차감/정숙성(Comfort/Noise)}: 진동 흡수와 소음 저감
+\end{enumerate}
+
 \subsection{타이어 균일성과 품질 지표}
 
 타이어의 균일성은 제품 품질과 안전성에 직접적인 영향을 미치는 핵심 지표이다. 본 보고서는 시뮬레이션과 데이터 기반 제어 개념을 활용한 개선 가능성을 살펴보았다. 
@@ -91,22 +117,175 @@
 
 \subsection{다층 복합재로서의 타이어}
 
-타이어는 단순 고무가 아닌 다층 복합재로 구성되며, 각 층이 서로 다른 기능을 담당한다:
+타이어는 단순 고무가 아닌 다층 복합재로 구성되며, 각 층이 서로 다른 기능을 담당한다. 주요 구성 요소는 다음과 같다.
 
-\begin{itemize}
-  \item \textbf{트레드(Tread)}: 노면 접촉으로 마모 저항성, 그립감 담당
-  \item \textbf{보강층(Reinforcement)}: 카카스와 벨트로 구조적 강도 제공
-  \item \textbf{사이드월(Sidewall)}: 주행 중 부하 변화에 대응
-  \item \textbf{비드(Bead)}: 림과의 접속부, 공기 누설 방지
-\end{itemize}
+\subsection{이너라이너(Inner Liner)}
 
-\subsection{트레드의 다층 구조}
+\textbf{역할}: 공기 차단으로 타이어 내압 유지.
 
-트레드는 마모층(Crown), 기초층(Base), 윙(Wing) 등 3중 이상의 고무층으로 구성되며, 각 층의 고무 배합이 상이하다.
+\textbf{소재}: BIIR/CIIR 저투과성 고무(Butyl/Chlorobutyl Rubber).
+
+\textbf{공정}: PCR(승용차용)은 압출 비중이 높으며, TBR(트럭/버스용)은 캘린더 시트도 흔함.
+
+\textbf{포인트}: 핀홀·스플라이스 누기 방지, 게이지 균일성 확보.
+
+\subsection{카카스 플라이(Carcass Ply)}
+
+\textbf{역할}: 타이어 기본 골격으로, 비드에서 비드까지 연속적으로 구성.
+
+\textbf{소재}: 폴리에스터/나일론 섬유 코드.
+
+\textbf{공정}: 코드를 RFL(Resorcinol-Formaldehyde-Latex) 딥 처리 후 캘린더로 양면 스킴 코팅, 바이어스 각도로 절단.
+
+\textbf{포인트}: 코드 각도·EPI(Ends Per Inch) 균일성, 턴업(비드 감싸기) 접착 강도.
+
+\subsection{스틸 코드 벨트(Steel Belt Package)}
+
+\textbf{역할}: 크라운 강성 증가, 원주 성장 억제, 트레드 접지 안정성 향상.
+
+\textbf{소재}: 브라스 도금 스틸 코드(보통 2--3겹, $\pm(15-25)°$ 배치).
+
+\textbf{공정}: 캘린더 양면 스킴 $\to$ 바이어스 각도 절단 $\to$ 성형 시 정합 적층.
+
+\textbf{포인트}: 각도/폭 정합, 엣지 피로·박리 방지(스텝 최소화).
+
+\subsection{와인딩 밴디지(캡플라이/스파이럴 오버레이)}
+
+\textbf{역할}: 고속에서 벨트 에지 구속, 원주 성장 억제, 유니포미티 보조.
+
+\textbf{소재}: 나일론/아라미드 코드 슬릿 테이프.
+
+\textbf{공정}: 연속 스파이럴 와인딩 또는 조인트 캡플라이 적층.
+
+\textbf{포인트}: 장력·피치 균일성, 겹침 단차 최소화.
+
+\subsection{트레드(Tread)}
+
+\textbf{역할}: 마찰·제동·마모·연비 성능 담당.
+
+\textbf{소재}: 캡(그립 중시)/베이스(발열 저감) 등 다층 구조.
+
+\textbf{공정}: 공압출(듀플렉스/트리플렉스) + 프로파일 다이 + 인라인 게이지 측정.
+
+\textbf{포인트}: 층간 접착, 프로파일·센터링, 스코치 관리.
+
+\subsection{러버 사이드월(Sidewall)}
+
+\textbf{역할}: 케이싱 보호, 내오존·내충격성, 연석 스커핑(연석 마찰로 인한 외측 마모·긁힘) 방어.
+
+\textbf{소재}: 내오존·내굴곡 배합(필요 시 컬러/화이트 레터).
+
+\textbf{공정}: 압출(스트립) $\to$ 성형 시 스티칭.
+
+\textbf{포인트}: 표면 미세 결함 방지(출구 전단·온도 관리), 두께 균일성.
+
+\subsection{비드(Bead) 어셈블리}
+
+비드는 여러 구성요소로 이루어진 복합 구조이다:
+
+\subsubsection{스틸 코어(Bead Core)}
+
+\textbf{역할}: 림 체결 및 기밀 유지.
+
+\textbf{소재/공정}: 고탄소강 와이어 권선·성형(브라스 코팅).
+
+\textbf{포인트}: 동심도·외경 공차 관리.
+
+\subsubsection{에이펙스(Apex)}
+
+\textbf{역할}: 비드 위 삼각 쐐기 형태로 하부 강성 경사 형성(승차감·조종성·내구성 조율).
+
+\textbf{소재/공정}: 고경도 고무 압출 $\to$ 비드에 열착.
+
+\textbf{포인트}: 각도·높이·질량 관리.
+
+\subsubsection{플리퍼(Flipper)}
+
+\textbf{역할}: 비드–플라이 사이 직물 절연층, 마모·컷 방지.
+
+\textbf{공정}: 코팅 패브릭 적층.
+
+\subsubsection{치퍼 와이어(Chipper Wire)}
+
+\textbf{역할}: 플랜지·포트홀 충격에서 플라이 보호(하부 사이드월).
+
+\textbf{공정}: 강선 링/스트립 적층(모델에 따라).
+
+\subsubsection{채퍼(Chafer)}
+
+\textbf{역할}: 림 접촉부 경질 고무 스트립으로 마찰·마모 방어, 림 고정 보조.
+
+\textbf{공정}: 압출 스트립 적층.
+
+\subsubsection{림가드(Rim Guard, 옵션)}
+
+\textbf{역할}: 림 손상·긁힘 방지용 돌출부(주로 UHP/SUV 타이어).
+
+\textbf{공정}: 트레드/사이드월과 공압출 또는 별도 압출.
 
 \subsection{공정과 최종 물성의 관계}
 
 배합 설계, 공압출, 가류 등 각 공정이 순차적으로 작용하여 최종 타이어 물성이 결정된다.
+
+\section{타이어 제조 공정 개요}
+
+타이어 제조는 배합(Compounding) $\to$ 반제품 제조(Semi-finished Products) $\to$ 성형(Building) $\to$ 가류(Curing) $\to$ 검사(Inspection)의 단계로 구성된다.
+
+\subsection{타이어 정련(제련, Compounding)}
+
+고무, 카본블랙, 실리카, 가소제, 가황제 등을 배합하여 최종 성능에 맞는 컴파운드를 제조하는 공정이다. 이 단계에서 트레드, 사이드월, 이너라이너 등 각 부위별 고무 배합물이 준비된다.
+
+\subsection{반제품 제조 공정}
+
+\subsubsection{압출(Extrusion) — 트레드·사이드월·아펙스 등}
+
+\textbf{장비}: 콜드피드 단축(다축) 압출기 + 기어펌프 + 스크린팩 + 다층 헤드(듀플렉스/트리플렉스) + 다이 + 인라인 레이저/비전 + 컷투렝스(Cut-to-Length).
+
+\textbf{핵심}: 프로파일/게이지 정합, 층간 접착(공압출 계면), 스코치 안전, 절단 길이·센터링 동기.
+
+\textbf{주요 불량 및 대응}:
+\begin{itemize}
+  \item \textbf{스웰·치수 산포} → 다이·냉각 동시 최적화
+  \item \textbf{계면 주름·분리} → 유로 밸런스·온도/압력 매칭
+  \item \textbf{표면 결함} → 출구 전단·온도 낮춤
+\end{itemize}
+
+\subsubsection{압연/캘린더링(Calendering) — 플라이·벨트·시트}
+
+\textbf{장비}: 2--4롤 캘린더 + 피드밀 + 코드 가이드·텐셔너 + 게이지 스캐너(상·하/총두께) + 와인더.
+
+\textbf{핵심}: 게이지 균일성, 코드 각도/EPI 분포, 접착(브라스–고무·RFL), 열형상(정지·재기동 관리).
+
+\textbf{주요 불량 및 대응}:
+\begin{itemize}
+  \item \textbf{엣지헤비/센터라이트} → 크로스액시스·롤벤딩·연삭 재검
+  \item \textbf{스팟 게이지(정지흔적)} → 연속운전·온도램프
+  \item \textbf{코드노출·편주입} → 가이드·텐션·니프 재세팅
+\end{itemize}
+
+\subsubsection{비드 공정(Bead) — 링/필러 모듈}
+
+\textbf{장비}: 비드 와인더(권선)·성형/프레스 + 아펙스 압출 + 차퍼 스트립 적층 + 동심·외경 검사.
+
+\textbf{핵심}: 동심도/외경 공차, 아펙스 각도·높이·질량(턴업부 강성·승차감), 접착 강도.
+
+\textbf{주요 불량 및 대응}:
+\begin{itemize}
+  \item \textbf{타원/면정렬 불량} → 성형·권선 텐션 보정
+  \item \textbf{아펙스 미끼움·박리} → 온도·압력·스티치 재설정
+\end{itemize}
+
+\subsection{성형 공정(Building)}
+
+준비된 반제품(이너라이너, 플라이, 벨트, 트레드, 사이드월, 비드 등)을 드럼 또는 성형기에서 순차적으로 적층하여 그린 타이어(Green Tire)를 완성하는 공정이다. 성형 과정에서 각 부품의 위치 정렬과 접착이 중요하다.
+
+\subsection{가류 공정(Curing/Vulcanization)}
+
+그린 타이어를 몰드에 넣고 고온·고압(약 150--180°C, 15--20 bar)에서 가황 반응을 일으켜 고무에 탄성과 강도를 부여하는 공정이다. 이 과정에서 트레드 패턴이 몰드에 의해 형성된다.
+
+\subsection{검사 공정(Inspection)}
+
+가류가 완료된 타이어는 외관 검사, 유니포미티(Uniformity) 검사, X-ray 검사 등을 거쳐 품질을 확인한다. 불량 타이어는 선별되고, 합격한 제품만 출하된다.
 
 \section{타이어 배합 설계}
 
@@ -507,9 +686,9 @@ B_{\text{Crown}} \neq B_{\text{Base}} \neq B_{\text{Wing}}
 
 이러한 팽윤 차이로 인해 계면 형상이 왜곡되고, 최종 제품의 치수 편차와 형상 불일치가 발생한다.
 
-\section{유동 특성과 질량 보존}
+\subsection{유동 특성과 질량 보존}
 
-\subsection{유동 균일성 지수}
+\subsubsection{유동 균일성 지수}
 
 3중 공압출에서 세 층의 계면 형상은 각 층의 유동 특성에 따라 결정된다. 유동 불균일성(flow non-uniformity):
 \begin{equation}
@@ -543,11 +722,11 @@ $\delta$가 작을수록:
 
 따라서 공정 설계에서는 $\dot\gamma_w$를 허용 범위 이하로 제어해야 한다.
 
-\section{다이 구조 설계 및 공정 파라미터 효과}
+\subsection{다이 구조 설계 및 공정 파라미터 효과}
 
-\subsection{다이 구조 파라미터}
+\subsubsection{다이 구조 파라미터}
 
-\subsubsection{다이 너비 (Die Width)}
+\paragraph{다이 너비 (Die Width)}
 
 다이 너비 $W$가 증가할 때:
 \begin{equation}
@@ -606,9 +785,9 @@ $\delta$가 작을수록:
 
 이로 인해 윙팁 영역에 표면 결함(흐름 불안정성, 표면 주름 등)이 선택적으로 발생한다.
 
-\section{다이 설계 최적화 전략}
+\subsection{다이 설계 최적화 전략}
 
-\subsection{다중 목적 함수 최적화}
+\subsubsection{다중 목적 함수 최적화}
 
 공압출 공정의 설계는 상충(conflict)하는 여러 목표를 동시에 만족해야 한다:
 
@@ -685,9 +864,9 @@ S_{ij} = \frac{\partial f_i}{\partial x_j} \bigg|_{\mathbf{x}_0}
 \label{eq:weighted_sum}
 \end{equation}
 
-\section{3중 공압출의 계면 동역학}
+\subsection{3중 공압출의 계면 동역학}
 
-\subsection{계면 형상 결정}
+\subsubsection{계면 형상 결정}
 
 세 층의 경계면 위치는 다음 원칙으로 결정된다:
 
@@ -730,7 +909,7 @@ S_{ij} = \frac{\partial f_i}{\partial x_j} \bigg|_{\mathbf{x}_0}
 \label{eq:interface_curvature}
 \end{equation}
 
-\section{수치해석 방법론 개요}
+\subsection{수치해석 방법론 개요}
 
 3중 공압출 PTT 점탄성 유동 해석은 식 (\ref{eq:ptt})이 포함된 강한 비선형 편미분방정식 시스템이다. 본 보고서에서는 상용 CFD 솔버인 ANSYS Polyflow 기준으로 다음 절차로 해석한다고 기술한다.
 
@@ -756,9 +935,9 @@ S_{ij} = \frac{\partial f_i}{\partial x_j} \bigg|_{\mathbf{x}_0}
   \label{eq:governing_full}
   \end{equation}
 
-\section{실제 공정 설계 사례}
+\subsection{실제 공정 설계 사례}
 
-\subsection{최적화 문제의 실제 적용}
+\subsubsection{최적화 문제의 실제 적용}
 
 다이 너비, 수렴각, 유량, 인발 속도를 설계 변수로 하는 다중 목적 최적화:
 
@@ -782,9 +961,9 @@ S_{ij} = \frac{\partial f_i}{\partial x_j} \bigg|_{\mathbf{x}_0}
   \item $w_4 = 0.1$: 생산 비용 (경제성)
 \end{itemize}
 
-\section{결론 및 설계 지침}
+\subsection{결론 및 설계 지침}
 
-\subsection{주요 결과}
+\subsubsection{주요 결과}
 
 타이어 트레드 3중 공압출 공정에 대한 본 연구의 주요 성과:
 
