@@ -21,16 +21,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: List files
-        run: ls -la *.html
-
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: .
 
   deploy:
     needs: build
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
