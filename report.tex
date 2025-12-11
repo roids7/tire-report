@@ -110,6 +110,100 @@
 
 \section{타이어 배합 설계}
 
+\subsection{타이어 성능의 마법의 삼각형}
+
+\subsubsection{성능 지표의 트레이드-오프}
+
+타이어의 주요 성능 지표는 세 가지 상충하는 요소로 구성되어 있다:
+
+\begin{enumerate}
+  \item \textbf{젖은 노면 접지력(제동력)}: 비오는 도로에서의 안전성과 제동 성능
+  \item \textbf{내마모성}: 타이어의 수명과 내구성
+  \item \textbf{구름 저항(굴림 저항)}: 연비와 주행 효율성
+\end{enumerate}
+
+이 세 가지 조건을 충족시키기 위해서는 반비례 관계를 보인다. 한 가지 성능을 개선하려면 다른 성능이 저하되는 경향이 있어, 배합 설계 시 이 3가지 요소를 균형있게 개선하는 것이 가장 큰 관건이다.
+
+\subsubsection{각 성능 지표의 물리적 기제}
+
+\paragraph{젖은 노면 접지력}
+
+제동력은 외부 마찰에 의한 점탄성 손실(Viscoelastic Loss)에 크게 의존한다. 타이어와 노면 간의 접촉에서 변형 및 복원되는 과정이 반복되고 이로 인해 큰 에너지 손실이 발생한다. 이러한 에너지 손실은 노면과 타이어 사이의 강한 상호작용을 의미하며, 손실된 에너지에 비례해서 마찰력이 증가한다. 이를 통해 공회전, 미끄러짐, 차량 흔들림을 방지하여 제동 성능 및 주행 안정성을 향상시킨다. 특히나 젖은 노면에서는 물막에 의해 노면 요철이 평탄해져 타이어와 노면 간의 상호작용이 감소하므로, 점탄성 손실을 통한 접지 확보가 더욱 필요하다.
+
+\paragraph{구름 저항(굴림 저항)}
+
+구름 저항은 타이어 내부에서 발생하는 에너지 손실로, 이는 타이어가 변형 및 복원할 때 일부 복원되지 못한 점탄성 손실에 의해 발생한다. 구름 저항의 원인으로는 하중, 공기압, 온도 등이 있다. 특히나 열의 경우, 주행 중에 타이어 내부에서 분자 사슬이 변형되어 발생한 마찰열로 인해 에너지 손실이 발생한다. 이렇게 발생한 내부적 마찰은 차량의 연비와 주행 성능을 크게 저하시키고, 나아가 연료 낭비로 인한 배기가스 증가로 인해 환경오염을 증대시킨다.
+
+\paragraph{내마모성}
+
+내마모성은 타이어의 자체적인 수명과 관련이 있다. 내마모성이 강할수록 타이어를 더욱 오래 사용할 수 있게 되고, 이를 통해 비용 절감 및 환경 개선에 영향을 준다.
+
+\subsubsection{성능 요소 간의 상충 관계}
+
+각 성능 지표를 개별적으로 증진시키려면 나머지 요소에 영향을 주어 오히려 타이어 성능을 크게 저하시킨다. 예를 들어:
+
+\begin{itemize}
+  \item \textbf{젖은 노면 접지력 증가}: 변형 및 복원에 용이해야 하므로 내마모성이 높으면 안 됨 → 굴림 저항 값 증가 → 주행 성능 저하
+  
+  \item \textbf{내마모성과 굴림 저항의 상충}: 내마모성이 너무 높으면 하중 분포 비균등, 미세 슬립 증가 등으로 인해 저주파 점탄성 손실 증가 → 굴림 저항 값 상승 → 연비 저하
+  
+  \item \textbf{최적 배합}: 마법의 삼각형의 3요소를 적절히 배분한 배합 조건이 필수
+\end{itemize}
+
+\subsubsection{PSR을 이용한 최적 배합 개발}
+
+이 세 가지 요소를 모두 보완한 새로운 배합 조건이 개발되었다. Peijin Weng 등의 연구에서는 기존의 친환경 고성능 타이어(그린 타이어) 배합 조건인 합성수지(Solution Styrene Butadiene Rubber, SSBR)–충전재(실리카)–커플러(TESPT, bis[3-(triethoxysilyl)propyl] tetrasulfide)에 PSR(phosphonium-modified petroleum resin)을 소량 첨가하여, 굴림 저항을 개선하는 동시에 나머지 두 요소에는 영향을 주지 않는 최적 배합을 발견하였다.
+
+\paragraph{실리카 충전계의 문제점}
+
+실리카 충전계에서 가장 큰 문제는 실리카 표면의 실란올기(Si–OH) 간 수소결합으로 인해 발생하는 강한 응집(filler–filler network)이다. 이는 분산 불량을 초래하여 다음을 유발한다:
+
+\begin{itemize}
+  \item 열발생 증가
+  \item 굴림 저항 악화
+  \item 내마모성 저하
+\end{itemize}
+
+\paragraph{PSR의 메커니즘}
+
+PSR이 실리카 충전계에 도입되면, PSR의 양전하를 띤 phosphonium 작용기($\mathrm{P^+R_4}$)가 실리카 표면의 음전하를 띤 실란올기(Si–OH)와 정전기적 인력 또는 친핵성 치환 반응을 통해 결합하여 Si–O–P 형태의 새로운 결합 네트워크를 형성한다. 
+
+이 과정의 주요 효과:
+
+\begin{enumerate}
+  \item \textbf{실리카-고무 계면 결합 강화}: 기존 TESPT의 황(S$_4$) 기반 커플링 반응과 병행되어 실리카-고무 계면 결합을 크게 강화
+  
+  \item \textbf{실리카 분산 개선}: 실리카–고무 계면을 균일하게 만들고 충전재 간 응집을 감소시킴
+  
+  \item \textbf{히스테리시스 손실 감소}: 충전재 간 응집이 줄어들어 히스테리시스 손실($\tan \delta(60 °\mathrm{C})$)을 감소시켜 굴림 저항 개선
+  
+  \item \textbf{젖은 노면 접지력 유지}: 고무 표면층의 고주파 점탄성 특성은 유지되어 젖은 노면 접지력($\tan \delta(0 °\mathrm{C})$)에는 거의 영향을 주지 않음
+  
+  \item \textbf{내열성 및 내구성 향상}: 균일해진 충전 네트워크는 고무 내부 열 발생(heat build-up)을 억제
+\end{enumerate}
+
+\paragraph{최적 PSR 첨가량의 중요성}
+
+이러한 효과는 PSR의 첨가량이 최적 범위일 때만 안정적으로 나타난다:
+
+\begin{itemize}
+  \item \textbf{부족 첨가}: PSR이 적게 첨가되면 실리카 표면과 결합할 수 있는 작용기 밀도가 부족해 응집을 충분히 해체하지 못함
+  
+  \item \textbf{과다 첨가}: 고무 이외 상(PSR-rich domain)이 형성되면서 plasticization 효과와 미세 응집을 유발해 점탄성 특성 및 기계적 강도를 저하시킴
+\end{itemize}
+
+\paragraph{실험 결과와 성과}
+
+최적의 결과를 가져온 실험 결과(PSR 2 phr 첨가):
+
+\begin{itemize}
+  \item $\tan \delta(60 °\mathrm{C})$ 약 14\% 감소 → \textbf{굴림 저항 개선}
+  \item $\tan \delta(0 °\mathrm{C})$ 약 19\% 증가 → \textbf{젖은 노면 제동력 유지}
+  \item 마모 손실 약 28\% 감소 → \textbf{내마모성 유지}
+\end{itemize}
+
+이는 단일 첨가제 변경만으로 트레드 물성을 다방면에서 개선한 매우 실용적이고 활용도 높은 사례이다.
+
 \subsection{배합 재료의 선정}
 
 \subsection{배합비 최적화}
@@ -573,12 +667,12 @@ S_{ij} = \frac{\partial f_i}{\partial x_j} \bigg|_{\mathbf{x}_0}
   \end{equation}
 \end{itemize}
 
-\subsection{파렛토 최적해(Pareto Optimal Solution)}
+\subsection{파레토 최적해(Pareto Optimal Solution)}
 
-다중 목적 최적화에서는 여러 파렛토 최적해가 존재한다. 이는 한 목표를 개선하려면 다른 목표를 악화시켜야 하는 상황을 의미한다:
+다중 목적 최적화에서는 여러 파레토 최적해가 존재한다. 이는 한 목표를 개선하려면 다른 목표를 악화시켜야 하는 상황을 의미한다:
 
 \begin{equation}
-\text{파렛토 최적해} \Leftrightarrow \neg \exists \mathbf{x}' \in \mathcal{F}: f_i(\mathbf{x}') \leq f_i(\mathbf{x}) \, \forall i
+\text{파레토 최적해} \Leftrightarrow \neg \exists \mathbf{x}' \in \mathcal{F}: f_i(\mathbf{x}') \leq f_i(\mathbf{x}) \, \forall i
 \label{eq:pareto_optimality}
 \end{equation}
 
@@ -703,7 +797,7 @@ S_{ij} = \frac{\partial f_i}{\partial x_j} \bigg|_{\mathbf{x}_0}
   
   \item \textbf{다이 구조 영향}: 식 (\ref{eq:die_width_effects})와 (\ref{eq:convergence_angle_effects})로부터, 다이 너비와 수렴각이 유동 균일성과 벽면 전단률에 미치는 정량적 영향을 정식화했다.
   
-  \item \textbf{공정 최적화 전략}: 다중 목적 최적화 제약 조건 하에서 파렛토 최적해를 도출하는 방법론을 제시했다.
+  \item \textbf{공정 최적화 전략}: 다중 목적 최적화 제약 조건 하에서 파레토 최적해를 도출하는 방법론을 제시했다.
 \end{enumerate}
 
 \subsection{공정 설계 지침}
