@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타이어 공정설계 과제 진행사항</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px 20px;
+        }
+        
+        .task-section {
+            margin-bottom: 30px;
+        }
+        
+        .task-title {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        
+        .status-completed {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        .status-pending {
+            background-color: #FFC107;
+            color: #333;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 30px;
+            background-color: #e0e0e0;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4CAF50, #45a049);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.9em;
+            transition: width 0.3s ease;
+        }
+        
+        .progress-pending {
+            background: linear-gradient(90deg, #FFC107, #FFB300);
+        }
+        
+        .task-description {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .details {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-left: 4px solid #667eea;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .details h4 {
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        .details ul {
+            margin-left: 20px;
+            color: #666;
+        }
+        
+        .details li {
+            margin-bottom: 5px;
+        }
+        
+        .summary {
+            background-color: #f0f7ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .summary h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .summary-item:last-child {
+            border-bottom: none;
+        }
+        
+        .footer {
+            background-color: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+            color: #999;
+            border-top: 1px solid #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏭 타이어 공정설계</h1>
+            <p>기계가공과 공정설계 과제 진행사항</p>
+        </div>
+        
+        <div class="content">
+            <!-- 배합 공정 -->
+            <div class="task-section">
+                <div class="task-title">
+                    1️⃣ 배합 공정 조사
+                    <span class="status-badge status-completed">✓ 완료</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 100%;">100%</div>
+                </div>
+                <div class="task-description">
+                    타이어 배합 공정에 대한 조사 및 분석 완료
+                </div>
+                <div class="details">
+                    <h4>📋 조사 내용:</h4>
+                    <ul>
+                        <li>원료 배합 비율 및 화학물질 성분 분석</li>
+                        <li>믹싱 장비 및 공정 절차</li>
+                        <li>배합 공정 최적화 방안</li>
+                        <li>품질 관리 기준</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 공압출 공정 -->
+            <div class="task-section">
+                <div class="task-title">
+                    2️⃣ 공압출 공정 조사
+                    <span class="status-badge status-completed">✓ 완료</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 100%;">100%</div>
+                </div>
+                <div class="task-description">
+                    공압출 공정에 대한 조사 및 분석 완료
+                </div>
+                <div class="details">
+                    <h4>📋 조사 내용:</h4>
+                    <ul>
+                        <li>압출 장비 및 구조 분석</li>
+                        <li>공정 온도 및 압력 조건</li>
+                        <li>타이어 구조별 압출 방법</li>
+                        <li>공압출 결함 및 개선방안</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 가류 공정 -->
+            <div class="task-section">
+                <div class="task-title">
+                    3️⃣ 가류 공정 조사
+                    <span class="status-badge status-completed">✓ 완료</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 100%;">100%</div>
+                </div>
+                <div class="task-description">
+                    가류 공정에 대한 조사 및 분석 완료
+                </div>
+                <div class="details">
+                    <h4>📋 조사 내용:</h4>
+                    <ul>
+                        <li>가류 공정의 원리 및 화학 반응</li>
+                        <li>황화 시간 및 온도 조건</li>
+                        <li>가류기(황화기) 장비 분석</li>
+                        <li>품질 평가 기준</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 보고서 작성 -->
+            <div class="task-section">
+                <div class="task-title">
+                    4️⃣ 보고서 작성
+                    <span class="status-badge status-completed">✓ 완료</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 100%;">100%</div>
+                </div>
+                <div class="task-description">
+                    조사 내용을 바탕으로 종합 보고서 작성 완료
+                </div>
+                <div class="details">
+                    <h4>📝 작성된 항목:</h4>
+                    <ul>
+                        <li>Abstract (타이어 공정 개요 및 연구 목표)</li>
+                        <li>타이어 구조 및 성능 지표 분석</li>
+                        <li>타이어 제조 공정 체인 설명</li>
+                        <li>트레드 3중 공압출 상세 분석 (PTT 모델, 다이 팽윤, 최적화 지침)</li>
+                        <li>타이어 가류 공정 분석 (Arrhenius 반응, 열전달, PT 연동 제어)</li>
+                        <li>결론 (주요 성과, 한계, 개선 방안)</li>
+                        <li>참고문헌 (13개 출처)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 진행사항 요약 -->
+            <div class="summary">
+                <h3>📊 전체 진행사항 요약</h3>
+                <div class="summary-item">
+                    <span>완료된 항목</span>
+                    <strong>4/4 (100%)</strong>
+                </div>
+                <div class="summary-item">
+                    <span>진행 중인 항목</span>
+                    <strong>0/4 (0%)</strong>
+                </div>
+                <div class="summary-item">
+                    <span>예정된 항목</span>
+                    <strong>0/4 (0%)</strong>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>기계가공과 공정설계 과제 | 마지막 업데이트: 2025년 12월 11일</p>
+        </div>
+    </div>
+</body>
+</html>
