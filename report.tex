@@ -10,6 +10,9 @@
 \setsansfont{Latin Modern Sans}
 \setCJKmainfont{Noto Sans CJK KR}
 \setCJKsansfont{Noto Sans CJK KR}
+% CJK 띄어쓰기 처리
+\xeCJKsetup{CJKspace=true, CJKglue=\hskip 0pt plus 0.08\baselineskip}
+\xeCJKsetcharclass{"AC00}{"D7A3}{1}
 
 \usepackage{amsmath,amssymb}
 \usepackage{graphicx}
@@ -155,8 +158,8 @@
 
 물리적 해석:
 \begin{itemize}
-  \item $\mathbf{D}$: 유체 요소의 모양 변화 속도 - 늘어남, 압축, 전단을 나타냄
-  \item $\mathbf{W}$: 유체 요소의 강체 회전 속도 - 좌표계가 회전하는 효과
+  \item $\mathbf{D}$: 유체 요소의 모양 변화 속도 -- 늘어남, 압축, 전단을 나타냄
+  \item $\mathbf{W}$: 유체 요소의 강체 회전 속도 -- 좌표계가 회전하는 효과
 \end{itemize}
 
 \subsection{객관성 원칙 (Objectivity Principle)}
