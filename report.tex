@@ -405,7 +405,7 @@ PSR이 실리카 충전계에 도입되면, PSR의 양전하를 띤 phosphonium 
 
 \subsection{기본 지배방정식}
 
-\subsection{연속 방정식 (Continuity Equation)}
+\subsubsection{연속 방정식 (Continuity Equation)}
 
 질량 보존 원리에 따른 연속 방정식은:
 \begin{equation}
@@ -456,7 +456,7 @@ PSR이 실리카 충전계에 도입되면, PSR의 양전하를 띤 phosphonium 
 \label{eq:stress_decomposition}
 \end{equation}
 
-\subsection{편차응력의 물리적 의미}
+\subsubsection{편차응력의 물리적 의미}
 
 정수압 $p_k$는 방향성이 없는 등방 압축을 나타내고, 편차응력 $\boldsymbol{\tau}_k$는 방향성 있는 전단 응력과 비등방 응력을 나타낸다. 뉴턴 유체에서는:
 \begin{equation}
@@ -491,7 +491,7 @@ PSR이 실리카 충전계에 도입되면, PSR의 양전하를 띤 phosphonium 
   \item $\mathbf{W}$: 유체 요소의 강체 회전 속도 -- 좌표계가 회전하는 효과
 \end{itemize}
 
-\subsection{객관성 원칙 (Objectivity Principle)}
+\subsubsection{객관성 원칙 (Objectivity Principle)}
 
 중요한 물리적 원칙: 순수 강체 회전(pure rigid body motion)에서 재료 내부에 응력이 생기면 안 된다.
 
@@ -503,7 +503,7 @@ PSR이 실리카 충전계에 도입되면, PSR의 양전하를 띤 phosphonium 
 
 따라서 물리적으로 타당한 구성식은 $\mathbf{D}$와 객관적 시간 미분(objective time derivative)에만 의존해야 한다. 회전 텐서 $\mathbf{W}$는 응력의 직접적인 원인이 될 수 없고, 오직 컨벡티드 미분을 통해 간접적으로만 나타난다.
 
-\subsection{PTT 점탄성 구성식}
+\subsection{PTT 점탄성 구성식과 다이 팽윤}
 
 \subsubsection{편차응력의 분류}
 
@@ -528,7 +528,7 @@ PSR이 실리카 충전계에 도입되면, PSR의 양전하를 띤 phosphonium 
 
 여기서 $\eta_2$는 점성 점도(viscous viscosity)이고, 이는 현재의 변형률률 $\mathbf{D}$에만 비례한다.
 
-\subsection{탄성 편차응력과 PTT 모델}
+\subsubsection{탄성 편차응력과 PTT 모델}
 
 파라미터 $\eta_1, \lambda, \varepsilon, \xi$를 가진 PTT(Phan-Thien-Tanner) 구성식:
 \begin{equation}
@@ -545,7 +545,7 @@ PSR이 실리카 충전계에 도입되면, PSR의 양전하를 띤 phosphonium 
   \item $\mathrm{tr}(\boldsymbol{\tau}_1)$: 응력 텐서의 자취(trace) - $\tau_{11} + \tau_{22} + \tau_{33}$
 \end{itemize}
 
-\subsection{비선형 응력 구성식의 의미}
+\subsubsection{비선형 응력 구성식의 의미}
 
 \subsubsection{지수함수 항의 역할}
 
@@ -616,7 +616,9 @@ N_1 = \tau_{11}-\tau_{22}, \qquad N_2 = \tau_{22}-\tau_{33}
 \label{eq:normal_stress}
 \end{equation}
 
-\subsection{다이 팽윤과 유동 특성 분석}
+\subsection{유동 특성과 다이 팽윤}
+
+\subsubsection{다이 팽윤의 물리적 메커니즘}
 
 \subsubsection{다이 팽윤의 물리적 메커니즘}
 
@@ -646,7 +648,7 @@ N_1 = \tau_{11}-\tau_{22}, \qquad N_2 = \tau_{22}-\tau_{33}
   출구에서 축 방향 제약이 풀리면 축 방향 응력은 빠르게 감소하지만, 횡 방향 응력은 느리게 감소하므로 순 장력이 팽창을 유도한다.
 \end{enumerate}
 
-\subsection{다이 팽윤율의 정의}
+\subsubsection{다이 팽윤율의 정의}
 
 다이 팽윤율(die swell ratio, swelling index):
 \begin{equation}
@@ -663,7 +665,7 @@ B = \frac{S - S_0}{S_0}\times 100\% = \frac{\Delta S}{S_0} \times 100\%
 
 예를 들어 $B = 20\%$는 출구 단면이 다이 폭의 20% 더 팽창했다는 의미이다.
 
-\subsection{PTT 파라미터와 다이 팽윤의 관계}
+\subsubsection{PTT 파라미터와 다이 팽윤의 관계}
 
 같은 다이와 공정 조건에서도 재료에 따라 팽윤이 달라진다. PTT 파라미터의 영향:
 
@@ -686,7 +688,7 @@ B_{\text{Crown}} \neq B_{\text{Base}} \neq B_{\text{Wing}}
 
 이러한 팽윤 차이로 인해 계면 형상이 왜곡되고, 최종 제품의 치수 편차와 형상 불일치가 발생한다.
 
-\subsection{유동 특성과 질량 보존}
+\subsection{유동 특성과 다이 설계}
 
 \subsubsection{유동 균일성 지수}
 
@@ -722,7 +724,7 @@ $\delta$가 작을수록:
 
 따라서 공정 설계에서는 $\dot\gamma_w$를 허용 범위 이하로 제어해야 한다.
 
-\subsection{다이 구조 설계 및 공정 파라미터 효과}
+\subsection{다이 구조 설계 및 최적화}
 
 \subsubsection{다이 구조 파라미터}
 
@@ -744,7 +746,7 @@ $\delta$가 작을수록:
 
 수렴각 증가 → 벽면 전단률 급증 → 표면 품질 저하. 동시에 압출 방향에 따라 유동 분배가 급격하게 변하는 고전단 영역이 입구에서 출구로 이동하면서 형상 편차도 증가한다.
 
-\subsection{공정 파라미터}
+\subsubsection{공정 파라미터}
 
 \subsubsection{유입 유량 (Inlet Flow Rate)}
 
@@ -785,7 +787,7 @@ $\delta$가 작을수록:
 
 이로 인해 윙팁 영역에 표면 결함(흐름 불안정성, 표면 주름 등)이 선택적으로 발생한다.
 
-\subsection{다이 설계 최적화 전략}
+\subsection{다이 설계 최적화 및 계면 동역학}
 
 \subsubsection{다중 목적 함수 최적화}
 
@@ -864,8 +866,6 @@ S_{ij} = \frac{\partial f_i}{\partial x_j} \bigg|_{\mathbf{x}_0}
 \label{eq:weighted_sum}
 \end{equation}
 
-\subsection{3중 공압출의 계면 동역학}
-
 \subsubsection{계면 형상 결정}
 
 세 층의 경계면 위치는 다음 원칙으로 결정된다:
@@ -934,8 +934,6 @@ S_{ij} = \frac{\partial f_i}{\partial x_j} \bigg|_{\mathbf{x}_0}
   \end{cases}
   \label{eq:governing_full}
   \end{equation}
-
-\subsection{실제 공정 설계 사례}
 
 \subsubsection{최적화 문제의 실제 적용}
 
@@ -1070,9 +1068,7 @@ v_d = \frac{Q}{S_0} \cdot \kappa, \quad \kappa = 1 + \frac{B_{\text{target}} - B
   \item 적정 범위 ($5\% < B < 15\%$): $v_d$ 유지
 \end{itemize}
 
-\subsection{고급 제어 전략}
-
-\subsubsection{피드 블록 설계}
+\subsubsection{고급 제어 전략}
 
 각 층의 유량을 독립적으로 제어하기 위해 피드 블록 설계:
 
