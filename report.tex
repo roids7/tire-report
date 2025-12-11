@@ -1180,6 +1180,58 @@ $C_{pk} \geq 1.33$ 이상이면 공정이 안정하다고 판단한다.
 
 몰드 내부는 압력이 높을 뿐만 아니라, 부위별로 온도가 다를 수도 있기 때문에 구멍을 뚫지 않으면 고무의 쏠림 현상이 발생할 수 있다. 또한 가류 공정 중 가하는 압력, 시간, 온도에 따라 전혀 다른 특성의 타이어가 만들어질 수 있기 때문에 이 때 고도의 기술과 노하우가 필요하다. 현재는 이와 같은 스퓨가 제거되지 않고 그대로 출고되었지만, 최근에는 깨끗하게 제거하는 트리밍 공정 기술을 통해 스퓨가 없는 타이어 또한 생산되고 있다.
 
+\subsection{온도·압력 프로파일 최적화}
+
+\subsubsection{기존 가황 공정의 문제점}
+
+가황 반응은 Arrhenius 식 (식 \ref{eq:arrhenius})에 따라 온도 변화에 매우 민감하다. 금형 내 온도 편차, 일정 압력 유지 방식, 그리고 시간·온도·압력의 상호작용 제어 부재는 가류 불균일의 주요 원인이 된다. 또한 가류 진행률 α(t)=∫k(T)dt 관계식(식 \ref{eq:cure_conversion})에서 보이듯, 동일 시간이라도 온도 조건에 따라 가류도가 크게 달라진다.
+
+\subsubsection{온도 프로파일 최적화 (Variable Temperature Curing)}
+
+온도 프로파일 최적화는 가황 단계를 초기–중간–후반의 3단계로 구분해 제어하는 방식이다:
+
+\begin{itemize}
+  \item \textbf{초기 고온 단계}: 반응 속도 k(T)을 빠르게 증가시켜 가교반응을 빠르게 시작하며 내부 가류 지연을 완화한다. 이를 통해 전체 가황 시간을 약 10~15\% 단축할 수 있다.
+  
+  \item \textbf{중간 안정 단계}: 금형 온도 분포가 균일해지는 구간으로, 설계된 가교 밀도 확보에 유리하다.
+  
+  \item \textbf{후반 저온 단계}: 과가류를 방지하고 물성 저하를 막으며, 트레드 패턴 손상을 최소화한다.
+\end{itemize}
+
+\subsubsection{압력 프로파일 최적화}
+
+압력은 고무 흐름성, 패턴 형성, 기포 제거에 중요한 영향을 미친다:
+
+\begin{itemize}
+  \item \textbf{초기 저압 단계}: 고무의 유동성을 확보해 금형 내부 충전 성능을 향상시킨다.
+  
+  \item \textbf{증압 단계}: 가교가 진행되면서 고무 점도가 증가하므로 압력을 점진적으로 높여 패턴 형성과 내부 결합을 강화한다.
+  
+  \item \textbf{최종 고압 유지}: 패턴 선명도를 확보하고 보강재와 고무의 결합력을 높여 제품 내구성을 향상시킨다.
+\end{itemize}
+
+\subsubsection{온도–압력 연동 최적화 (PT Coupled Control)}
+
+온도와 압력을 독립적으로 제어하는 방식에서 벗어나, 두 변수를 상호 연동하여 제어하는 전략이다. 가류 진행률은 다음과 같이 표현된다:
+
+\begin{equation}
+\alpha(t) = \int_0^t f(T, P) \, dt
+\label{eq:cure_tp_coupled}
+\end{equation}
+
+여기서 $f(T,P)$는 온도와 압력의 상호작용에 따른 반응률이다. 예를 들어 온도가 높은 경우 필요한 압력을 낮춰도 동일한 가류 효과를 얻을 수 있으며, 온도가 낮은 경우 압력 증압 곡선을 조정하여 균일한 가류 품질을 유지할 수 있다.
+
+이러한 온도-압력 연동 제어를 통해 다음의 개선 효과를 얻을 수 있다:
+
+\begin{itemize}
+  \item 내부·외부 가류 균일도 증가
+  \item 과가류/미가류 불량 감소
+  \item 전체 생산성 향상 (가황 시간 10~15\% 단축)
+  \item 패턴 선명도 및 외관 품질 향상
+  \item 스퓨(Spew) 발생량 감소
+  \item 공정능력(Cpk) 향상 및 품질 안정성 강화
+\end{itemize}
+
 \subsection{가류가 타이어 물성에 미치는 영향}
 
 \section{결론}
@@ -1240,10 +1292,11 @@ $C_{pk} \geq 1.33$ 이상이면 공정이 안정하다고 판단한다.
   \item Wang, G.-L., Zhou, H.-J., Zhou, H.-C., Liang, C., ``Viscoelastic Numerical Simulation Study on the Co-Extrusion Process of Tri-Composite Tire Tread,'' \textit{Materials}, 16(9), 3301 (2023).
   \item Jeong, K. M., Kim, K. W., Beom, H. G., and Park, J. U., ``Finite Element Analysis of Nonuniformity of Tires with Imperfections,'' \textit{Tire Science and Technology}, Vol. 35, No. 3, pp. 226--238, 2007.
   \item Weng, P., Tang, Z., Guo, B., ``Solving `magic triangle' of tread rubber composites with phosphonium-modified petroleum resin,'' \textit{Polymer}, 190, 122244 (2020).
-  \item Mark, J.E., \textit{The Science and Technology of Rubber}, Academic Press.
-  \item Bhowmick \& Stephens, \textit{Handbook of Elastomers}, CRC Press.
+  \item Mark, J. E., Erman, B., \& Roland, C. M. (2013). \textit{The Science and Technology of Rubber}. Academic Press. (고무 가교 메커니즘, 가류 반응 모델, 열·물성 변화)
+  \item Stephens, H., \& Bhowmick, A. K. (2001). \textit{Handbook of Elastomers}. CRC Press. (가류 공정의 물성 변화, 배합·가교 밀도와 기계적 특성 관계)
+  \item Coran, A. Y. (1995). Vulcanization. In \textit{Science and Technology of Rubber}. (Arrhenius 기반 가류 반응속도 모델, 최적 가황 조건 분석)
+  \item Montgomery, D. C. (2009). \textit{Introduction to Statistical Quality Control}. Wiley. (공정능력(Cp, Cpk) 분석 이론적 근거)
   \item \textit{Rubber Extrusion Handbook}, Hanser Publishers.
-  \item Montgomery, \textit{Introduction to Statistical Quality Control}, Wiley.
   \item ``Effect of Vulcanization Conditions on Mechanical Properties of Tire Rubber,'' Elsevier.
   \item ``Calendering Process of Tire Cord Rubber Composites,'' ScienceDirect.
   \item ``Arrhenius Kinetics in Vulcanization: Temperature-Dependent Cross-Linking Dynamics,'' \textit{Rubber Chemistry and Technology}, Vol. 82, No. 5, 2009.
