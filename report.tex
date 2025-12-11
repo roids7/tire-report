@@ -301,161 +301,7 @@
   \item \textbf{성형 완료}: 모든 층이 드럼에 적층된 후, 드럼이 회전하면서 각 층을 압착하여 일체화한다. 이때 완성된 미가황 타이어를 \textbf{그린 타이어(Green Tire)}라고 하며, 이후 가류공정을 통해 최종 제품으로 완성된다.
 \end{enumerate}
 
-\subsection{타이어 가류 공정(Tire Vulcanization Process)}
 
-\subsubsection{가류 공정의 정의 및 목적}
-
-가류(Vulcanization) 공정이란 성형된 타이어를 고온·고압 환경에서 가열하여 고무 분자 사슬 사이에 황(Sulfur) 가교 결합(Cross-link)을 형성시키는 공정이다. 이를 통해 고무는 강도, 내열성, 내마모성, 탄성 복원력을 갖는 구조 재료로 변화한다. 가류 공정은 타이어의 최종 성능과 안전성을 결정하는 핵심 공정이다.
-
-성형 공정을 마친 유연한 타이어를 몰드에 넣고, 열과 압력을 가하는 과정이다. 몰드는 마치 붕어빵을 만들어내는 붕어빵 틀과 같은 기능을 하는 부품으로, 아직 문양 없이 밋밋한 상태의 타이어는 몰드를 만나고 난 뒤 비로소 패턴과 형태가 만들어진다. 따라서 가류 공정은 타이어의 최종 형태를 완성하는 중요한 과정이다.
-
-\subsubsection{가류 반응 속도 모델 (Arrhenius 식)}
-
-가류 반응은 온도 의존 화학 반응이며, 반응 속도는 Arrhenius 식으로 표현된다:
-
-\begin{equation}
-k = A \exp\left(-\frac{E_a}{RT}\right)
-\label{eq:arrhenius}
-\end{equation}
-
-여기서:
-\begin{itemize}
-  \item $k$: 반응 속도 상수
-  \item $A$: 전지수 인자(Pre-exponential factor)
-  \item $E_a$: 활성화 에너지(Activation energy)
-  \item $R$: 기체 상수 (8.314 J/(mol·K))
-  \item $T$: 절대 온도(K)
-\end{itemize}
-
-온도가 증가하면 반응 속도는 지수적으로 증가하며, 온도가 과도하면 과가류(Over-cure)가 발생해 오히려 강도가 감소한다.
-
-\subsubsection{가교 밀도와 기계적 물성 관계}
-
-가교 밀도(ν)는 고무의 탄성계수(E)와 비례 관계를 가진다:
-
-\begin{equation}
-E = 3\nu RT
-\label{eq:modulus_crosslink}
-\end{equation}
-
-가교 밀도가 증가할수록 강성과 내마모성이 증가한다. 단, 과도한 가교는 취성 증가와 피로 수명 감소를 초래한다.
-
-\subsubsection{가류 진행률 적산 모델}
-
-가류 진행률(Cure conversion, α)은 반응 속도의 시간 적분으로 표현되며, 동일한 가류 시간이라도 온도에 따라 가류 정도가 크게 달라진다:
-
-\begin{equation}
-\alpha(t) = \int_0^t k(T) \, dt
-\label{eq:cure_conversion}
-\end{equation}
-
-$\alpha = 0$일 때는 미가류(Uncured), $\alpha = 1$일 때는 완전 가류(Fully cured) 상태를 의미한다.
-
-\subsubsection{가류 공정의 열전달 지배 방정식}
-
-가류는 금형에서 고무 내부로 열이 전달되는 열전도 지배 공정이다:
-
-\begin{equation}
-\rho c \frac{\partial T}{\partial t} = k \nabla^2 T
-\label{eq:heat_equation}
-\end{equation}
-
-여기서:
-\begin{itemize}
-  \item $\rho$: 고무의 밀도
-  \item $c$: 비열용량(Specific heat)
-  \item $k$: 열전도율(Thermal conductivity)
-  \item $\nabla^2 T$: 온도의 라플라시안
-\end{itemize}
-
-타이어는 두께가 크기 때문에 표면과 내부의 가류 정도가 서로 달라질 수 있다. 이를 열 이동 수(Fourier number)로 표현할 수 있다:
-
-\begin{equation}
-Fo = \frac{k t}{\rho c L^2}
-\label{eq:fourier}
-\end{equation}
-
-여기서 $L$은 특성 길이(타이어 두께의 절반)이다.
-
-\subsubsection{산업 현장 가류 조건}
-
-일반적인 타이어 가류 조건:
-\begin{itemize}
-  \item \textbf{온도}: 150 ~ 170°C
-  \item \textbf{압력}: 15 ~ 22 bar
-  \item \textbf{시간}: 10 ~ 20 분
-  \item \textbf{냉각 시간}: 3 ~ 5 분
-\end{itemize}
-
-\subsubsection{가류 불량의 수식적 정의}
-
-\begin{equation}
-\text{미가류(Under-cure)}: \quad \alpha < \alpha_{\text{opt}} \quad \Rightarrow \quad \text{강도 부족, 조기 마모}
-\label{eq:undercure}
-\end{equation}
-
-\begin{equation}
-\text{과가류(Over-cure)}: \quad \alpha > \alpha_{\text{opt}} \quad \Rightarrow \quad \text{취성 증가, 균열 발생}
-\label{eq:overcure}
-\end{equation}
-
-최적 가류 조건에서는 $\alpha \approx \alpha_{\text{opt}}$ (보통 0.90 ~ 0.95)일 때 최고의 기계적 성능을 나타낸다.
-
-\subsubsection{가류 공정의 공정능력(Cp, Cpk) 평가}
-
-가류온도, 시간, 압력의 안정성을 공정능력 지수로 평가한다:
-
-\begin{equation}
-C_p = \frac{USL - LSL}{6\sigma}
-\label{eq:cp}
-\end{equation}
-
-\begin{equation}
-C_{pk} = \min\left(\frac{USL - \mu}{3\sigma}, \frac{\mu - LSL}{3\sigma}\right)
-\label{eq:cpk}
-\end{equation}
-
-여기서:
-\begin{itemize}
-  \item $USL$: 상한 규격(Upper Specification Limit)
-  \item $LSL$: 하한 규격(Lower Specification Limit)
-  \item $\mu$: 평균값
-  \item $\sigma$: 표준편차
-\end{itemize}
-
-$C_{pk} \geq 1.33$ 이상이면 공정이 안정하다고 판단한다.
-
-\subsubsection{가류 공정 최적화 수식 기반 개선 전략}
-
-\paragraph{온도-시간 최적화}
-
-에너지 최소화와 가류도 최적화를 동시에 고려:
-
-\begin{equation}
-\min J = w_1 \int_0^{t_c} T(t) \, dt + w_2 (1 - \alpha(t_c))^2
-\label{eq:optimization}
-\end{equation}
-
-여기서 $w_1, w_2$는 가중치, $t_c$는 가류 시간이다.
-
-\paragraph{내부 미가류 방지}
-
-금형 예열 및 블래더 압력 균일화가 필수적이다. Fourier 수가 충분히 커야 타이어 전체가 균일하게 가열된다:
-
-\begin{equation}
-Fo > 0.3 \quad \Rightarrow \quad t_c > \frac{0.3 \rho c L^2}{k}
-\label{eq:min_time}
-\end{equation}
-
-\subsubsection{가류 후 검사 및 후처리}
-
-가류가 완료된 타이어는 시각적 검사와 물리적 검사를 거친다. 외관의 결함, 트레드 패턴의 균일성, 균열 여부 등을 확인하며, 필요 시 X-레이 검사로 내부 결함을 검출한다. 이후 불필요한 고무 잔여물을 제거하고, 로고 및 규격 표시를 인쇄한 뒤 출하된다.
-
-\paragraph{타이어 스퓨(수염) 발생 원인}
-
-바로 이 가류 공정 중 고무를 몰드에 찍는 과정에서 자연스럽게 스퓨가 발생한다. 고무재료를 몰드에 넣어 타이어를 만들 때, 몰드 내부의 공기가 밖으로 빠져 나오도록 미세한 구멍을 뚫게 된다. 바로 이 구멍으로 고무가 흘러나와서 굳은 것이 스퓨(타이어 수염)가 된다. 따라서 스퓨는 타이어 성능과는 전혀 관계가 없으며, 시간이 지나면 자연스럽게 제거된다.
-
-몰드 내부는 압력이 높을 뿐만 아니라, 부위별로 온도가 다를 수도 있기 때문에 구멍을 뚫지 않으면 고무의 쏠림 현상이 발생할 수 있다. 또한 가류 공정 중 가하는 압력, 시간, 온도에 따라 전혀 다른 특성의 타이어가 만들어질 수 있기 때문에 이 때 고도의 기술과 노하우가 필요하다. 현재는 이와 같은 스퓨가 제거되지 않고 그대로 출고되었지만, 최근에는 깨끗하게 제거하는 트리밍 공정 기술을 통해 스퓨가 없는 타이어 또한 생산되고 있다.
 
 \section{타이어 배합 설계}
 
@@ -1175,9 +1021,165 @@ h_k^{\text{feed}} = \frac{Q_k \cdot L}{v_{\text{nominal}} \cdot W}
 
 
 \section{타이어 가류 공정}
+
+\subsection{가류 공정의 정의 및 목적}
+
+가류(Vulcanization) 공정이란 성형된 타이어를 고온·고압 환경에서 가열하여 고무 분자 사슬 사이에 황(Sulfur) 가교 결합(Cross-link)을 형성시키는 공정이다. 이를 통해 고무는 강도, 내열성, 내마모성, 탄성 복원력을 갖는 구조 재료로 변화한다. 가류 공정은 타이어의 최종 성능과 안전성을 결정하는 핵심 공정이다.
+
+성형 공정을 마친 유연한 타이어를 몰드에 넣고, 열과 압력을 가하는 과정이다. 몰드는 마치 붕어빵을 만들어내는 붕어빵 틀과 같은 기능을 하는 부품으로, 아직 문양 없이 밋밋한 상태의 타이어는 몰드를 만나고 난 뒤 비로소 패턴과 형태가 만들어진다. 따라서 가류 공정은 타이어의 최종 형태를 완성하는 중요한 과정이다.
+
 \subsection{가류 메커니즘}
+
+\subsubsection{가류 반응 속도 모델 (Arrhenius 식)}
+
+가류 반응은 온도 의존 화학 반응이며, 반응 속도는 Arrhenius 식으로 표현된다:
+
+\begin{equation}
+k = A \exp\left(-\frac{E_a}{RT}\right)
+\label{eq:arrhenius}
+\end{equation}
+
+여기서:
+\begin{itemize}
+  \item $k$: 반응 속도 상수
+  \item $A$: 전지수 인자(Pre-exponential factor)
+  \item $E_a$: 활성화 에너지(Activation energy)
+  \item $R$: 기체 상수 (8.314 J/(mol·K))
+  \item $T$: 절대 온도(K)
+\end{itemize}
+
+온도가 증가하면 반응 속도는 지수적으로 증가하며, 온도가 과도하면 과가류(Over-cure)가 발생해 오히려 강도가 감소한다.
+
+\subsubsection{가교 밀도와 기계적 물성 관계}
+
+가교 밀도(ν)는 고무의 탄성계수(E)와 비례 관계를 가진다:
+
+\begin{equation}
+E = 3\nu RT
+\label{eq:modulus_crosslink}
+\end{equation}
+
+가교 밀도가 증가할수록 강성과 내마모성이 증가한다. 단, 과도한 가교는 취성 증가와 피로 수명 감소를 초래한다.
+
+\subsubsection{가류 진행률 적산 모델}
+
+가류 진행률(Cure conversion, α)은 반응 속도의 시간 적분으로 표현되며, 동일한 가류 시간이라도 온도에 따라 가류 정도가 크게 달라진다:
+
+\begin{equation}
+\alpha(t) = \int_0^t k(T) \, dt
+\label{eq:cure_conversion}
+\end{equation}
+
+$\alpha = 0$일 때는 미가류(Uncured), $\alpha = 1$일 때는 완전 가류(Fully cured) 상태를 의미한다.
+
 \subsection{가류 조건 최적화}
+
+\subsubsection{가류 공정의 열전달 지배 방정식}
+
+가류는 금형에서 고무 내부로 열이 전달되는 열전도 지배 공정이다:
+
+\begin{equation}
+\rho c \frac{\partial T}{\partial t} = k \nabla^2 T
+\label{eq:heat_equation}
+\end{equation}
+
+여기서:
+\begin{itemize}
+  \item $\rho$: 고무의 밀도
+  \item $c$: 비열용량(Specific heat)
+  \item $k$: 열전도율(Thermal conductivity)
+  \item $\nabla^2 T$: 온도의 라플라시안
+\end{itemize}
+
+타이어는 두께가 크기 때문에 표면과 내부의 가류 정도가 서로 달라질 수 있다. 이를 열 이동 수(Fourier number)로 표현할 수 있다:
+
+\begin{equation}
+Fo = \frac{k t}{\rho c L^2}
+\label{eq:fourier}
+\end{equation}
+
+여기서 $L$은 특성 길이(타이어 두께의 절반)이다.
+
+\subsubsection{산업 현장 가류 조건}
+
+일반적인 타이어 가류 조건:
+\begin{itemize}
+  \item \textbf{온도}: 150 ~ 170°C
+  \item \textbf{압력}: 15 ~ 22 bar
+  \item \textbf{시간}: 10 ~ 20 분
+  \item \textbf{냉각 시간}: 3 ~ 5 분
+\end{itemize}
+
+\subsubsection{가류 불량의 수식적 정의}
+
+\begin{equation}
+\text{미가류(Under-cure)}: \quad \alpha < \alpha_{\text{opt}} \quad \Rightarrow \quad \text{강도 부족, 조기 마모}
+\label{eq:undercure}
+\end{equation}
+
+\begin{equation}
+\text{과가류(Over-cure)}: \quad \alpha > \alpha_{\text{opt}} \quad \Rightarrow \quad \text{취성 증가, 균열 발생}
+\label{eq:overcure}
+\end{equation}
+
+최적 가류 조건에서는 $\alpha \approx \alpha_{\text{opt}}$ (보통 0.90 ~ 0.95)일 때 최고의 기계적 성능을 나타낸다.
+
+\paragraph{온도-시간 최적화}
+
+에너지 최소화와 가류도 최적화를 동시에 고려:
+
+\begin{equation}
+\min J = w_1 \int_0^{t_c} T(t) \, dt + w_2 (1 - \alpha(t_c))^2
+\label{eq:optimization}
+\end{equation}
+
+여기서 $w_1, w_2$는 가중치, $t_c$는 가류 시간이다.
+
+\paragraph{내부 미가류 방지}
+
+금형 예열 및 블래더 압력 균일화가 필수적이다. Fourier 수가 충분히 커야 타이어 전체가 균일하게 가열된다:
+
+\begin{equation}
+Fo > 0.3 \quad \Rightarrow \quad t_c > \frac{0.3 \rho c L^2}{k}
+\label{eq:min_time}
+\end{equation}
+
 \subsection{가류 특성 평가}
+
+\subsubsection{가류 공정의 공정능력(Cp, Cpk) 평가}
+
+가류온도, 시간, 압력의 안정성을 공정능력 지수로 평가한다:
+
+\begin{equation}
+C_p = \frac{USL - LSL}{6\sigma}
+\label{eq:cp}
+\end{equation}
+
+\begin{equation}
+C_{pk} = \min\left(\frac{USL - \mu}{3\sigma}, \frac{\mu - LSL}{3\sigma}\right)
+\label{eq:cpk}
+\end{equation}
+
+여기서:
+\begin{itemize}
+  \item $USL$: 상한 규격(Upper Specification Limit)
+  \item $LSL$: 하한 규격(Lower Specification Limit)
+  \item $\mu$: 평균값
+  \item $\sigma$: 표준편차
+\end{itemize}
+
+$C_{pk} \geq 1.33$ 이상이면 공정이 안정하다고 판단한다.
+
+\subsubsection{가류 후 검사 및 후처리}
+
+가류가 완료된 타이어는 시각적 검사와 물리적 검사를 거친다. 외관의 결함, 트레드 패턴의 균일성, 균열 여부 등을 확인하며, 필요 시 X-레이 검사로 내부 결함을 검출한다. 이후 불필요한 고무 잔여물을 제거하고, 로고 및 규격 표시를 인쇄한 뒤 출하된다.
+
+\paragraph{타이어 스퓨(수염) 발생 원인}
+
+바로 이 가류 공정 중 고무를 몰드에 찍는 과정에서 자연스럽게 스퓨가 발생한다. 고무재료를 몰드에 넣어 타이어를 만들 때, 몰드 내부의 공기가 밖으로 빠져 나오도록 미세한 구멍을 뚫게 된다. 바로 이 구멍으로 고무가 흘러나와서 굳은 것이 스퓨(타이어 수염)가 된다. 따라서 스퓨는 타이어 성능과는 전혀 관계가 없으며, 시간이 지나면 자연스럽게 제거된다.
+
+몰드 내부는 압력이 높을 뿐만 아니라, 부위별로 온도가 다를 수도 있기 때문에 구멍을 뚫지 않으면 고무의 쏠림 현상이 발생할 수 있다. 또한 가류 공정 중 가하는 압력, 시간, 온도에 따라 전혀 다른 특성의 타이어가 만들어질 수 있기 때문에 이 때 고도의 기술과 노하우가 필요하다. 현재는 이와 같은 스퓨가 제거되지 않고 그대로 출고되었지만, 최근에는 깨끗하게 제거하는 트리밍 공정 기술을 통해 스퓨가 없는 타이어 또한 생산되고 있다.
+
 \subsection{가류가 타이어 물성에 미치는 영향}
 
 \section{결론}
